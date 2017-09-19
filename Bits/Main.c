@@ -10,15 +10,16 @@ int main(int argc, char** argv)
 	//a new main that will test that your implementation of the 
 	//functions works properly.
 
-	/*for (uint u = 0; u < 256; ++u)
-	{
-		PrintBits(u);
-		printf("\n");
-		printf(u);
-		printf("\n");
-	}*/
+	//for (uint u = 0; u < 256; ++u)
+	//{
+	//	PrintBits(u);
+	//	printf("\n");
+	//	printf(u);
+	//	printf("\n");
+	//}
 
-	PrintBits(SetN(4, 1));
+
+	PrintBits(ClearN(255, 1));
 	//Pause display only while debugging
 #ifdef _DEBUG
 	fflush(stdin); //Make sure there's nothing lurking in the buffer.

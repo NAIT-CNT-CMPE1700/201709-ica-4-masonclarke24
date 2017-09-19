@@ -48,6 +48,7 @@ uint SetN(uint val, int n)
 //(If bit n was already 0, it will be unmodified)
 uint ClearN(uint val, byte n)
 {
+	val &= ~(1 << n);
 	return val;
 }
 
