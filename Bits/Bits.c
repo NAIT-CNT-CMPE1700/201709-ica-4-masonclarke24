@@ -5,7 +5,7 @@
 void FPrintBits(FILE* stream, uint value)
 {
 	//Iterate from msb (bit 31) to lsb (bit 0)
-	for (char b = sizeof(value) * 4 - 1; b >= 0; b--)
+	for (char b = sizeof(value) * 8 - 1; b >= 0; b--)
 		//Use and mask -- result will be 0 (false) iff bit is 0
 		fprintf(stream, "%c", (value & (1 << b)) ? '1' : '0');
 	fflush(stream);
@@ -29,15 +29,16 @@ byte CountSet(uint val)
 //Count how many 0 bits
 byte CountClear(uint val)
 {
-	return sizeof(val)*4 - CountSet(val);
+	return sizeof(val)*8 - CountSet(val);
 }
 
 //NB: YOU ARE TO COMPLETE THE FUNCTION BELOW
 //Set bit n (bit 0 is lsb)
 //Returns the val, modified so bit n is 1
 //(If bit n was already 1, it will be unmodified)
-uint SetN(uint val, byte n)
+uint SetN(uint val, int n)
 {
+	val |= 1 << n;
 	return val;
 }
 
