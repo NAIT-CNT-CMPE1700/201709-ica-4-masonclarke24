@@ -18,7 +18,7 @@ int main(int argc, char** argv)
 	//	printf("\n");
 	//}
 
-	PrintBits(ToggleN(1, 0));
+	PrintBits(CountClear(1));
 
 	//Pause display only while debugging
 #ifdef _DEBUG

@@ -21,8 +21,16 @@ void PrintBits(uint value)
 //Count how many 1 bits
 byte CountSet(uint val)
 {
+	byte numberOf1s = 0;
+	for (char n = sizeof(val) * 8 - 1; n >= 0; n--)
+	{
+		if (val & (1 << n))
+		{
+			numberOf1s++;
+		}
+	}
 
-	return 0;
+	return numberOf1s;
 }
 
 //This should work if the function about is correct.
