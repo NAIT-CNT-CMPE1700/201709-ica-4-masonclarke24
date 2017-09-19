@@ -18,8 +18,8 @@ int main(int argc, char** argv)
 	//	printf("\n");
 	//}
 
+	PrintBits(ToggleN(1, 0));
 
-	PrintBits(ClearN(255, 1));
 	//Pause display only while debugging
 #ifdef _DEBUG
 	fflush(stdin); //Make sure there's nothing lurking in the buffer.

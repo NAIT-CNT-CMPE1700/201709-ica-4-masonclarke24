@@ -36,7 +36,7 @@ byte CountClear(uint val)
 //Set bit n (bit 0 is lsb)
 //Returns the val, modified so bit n is 1
 //(If bit n was already 1, it will be unmodified)
-uint SetN(uint val, int n)
+uint SetN(uint val, byte n)
 {
 	val |= 1 << n;
 	return val;
@@ -57,5 +57,6 @@ uint ClearN(uint val, byte n)
 //Returns the val, modified so bit n is different
 uint ToggleN(uint val, byte n)
 {
+	val ^= 1 << n;
 	return val;
 }
